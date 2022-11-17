@@ -23,7 +23,7 @@ pio.renderers.default = 'iframe'
 pd.set_option('display.max_rows',None)
 pd.set_option('display.max_columns',None)
 # pytrends = TrendReq()
-pytrends = TrendReq(timeout=(10,25), retries=2, backoff_factor=0.1)
+pytrends = TrendReq(timeout=(12,50), retries=2, backoff_factor=0.1)
 scaler = MinMaxScaler()
 
 ########################################
@@ -40,7 +40,7 @@ def range_date(release_date):
     end_date = end_date.strftime("%Y-%-m-%d")
     return start_date, end_date
 
-# @st.cache(ttl=60)
+@st.cache
 def download_data(cat,version,start_date,end_date):
     """
     
