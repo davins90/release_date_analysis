@@ -40,7 +40,7 @@ def range_date(release_date):
     end_date = end_date.strftime("%Y-%-m-%d")
     return start_date, end_date
 
-@st.cache(ttl=60)
+# @st.cache(ttl=60)
 def download_data(cat,version,start_date,end_date):
     """
     
