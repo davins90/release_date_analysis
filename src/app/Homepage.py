@@ -79,6 +79,8 @@ if st.button("Click to retrieve data from Google Trend"):
     st.plotly_chart(fig, use_container_width=True)
     
     df['date_str'] = df['Day'].apply(lambda x: str(x))
+
+    st.table(df)
     
     st.markdown("### 2) Multicriteria - Animation Day by Day")
     st.markdown("Each quadrant of the graph below describe how consumer demand behaved simultaneously for the subjects under consideration. Legend and tooltip interactive.")
