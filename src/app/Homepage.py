@@ -10,7 +10,7 @@ st.markdown("# Release Date Analysis - Google Trend version")
 st.markdown("## Intro")
 
 st.markdown("The goal of this tool is to estimate consumer demand for two subjects: \n - piracy services \n - OTT/DTH content (Gangs of Londons S2, e.g.)")
-st.markdown("The data source of this tool is retrived from Google Trend.")
+st.markdown("The data source of this tool is retrived from Google Trend. Update on 17/11/22")
 
 st.markdown("## User Input")
 
@@ -25,14 +25,16 @@ else:
         word = st.text_input(label="Inser keywords {} (max 5)".format(i),key=i)
         cat.append(word)
 
-check2 = st.selectbox("On which week do you want to do the analysis (related to the Gangs release)?",("Week 1", "Week 2", "Week 3"))
+check2 = st.selectbox("On which week do you want to do the analysis (related to the Gangs release)?",("Week 1", "Week 2", "Week 3", "Week 4"))
 
 if check2 == "Week 1":
     release_date = "20-10-2022"
 elif check2 == "Week 2":
     release_date = "27-10-2022"
-else:
+elif check2 == "Week 3":
     release_date = "03-11-2022"
+else:
+    release_date = "10-11-2022"
 
 st.write("The release date of the ", check2, "is: ",release_date)
 
